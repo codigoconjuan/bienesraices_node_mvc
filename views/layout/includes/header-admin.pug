@@ -1,0 +1,13 @@
+header.bg-indigo-600.p-4
+    .container.mx-auto.flex.justify-between.items-center
+        a(href="/") 
+            h1.text-2xl.text-white.font-extrabold.text-center Bienes
+                span.font-normal Raices
+
+        nav(class="my-5 text-sm md:flex md:items-center md:gap-3 font-bold text-white hidden ")
+            a(href="/mis-propiedades") Mis Propiedades 
+            a(href="") Mi Perfil
+
+            form(action="/auth/cerrar-sesion" method="POST")
+                input(type="hidden" name="_csrf" value=csrfToken )
+                input( type="submit" class="bg-indigo-800 py-2 px-10 rounded-lg font-bold cursor-pointer" value="Cerrar Sesión")
